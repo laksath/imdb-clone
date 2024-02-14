@@ -33,9 +33,24 @@ body {
     /* justify-content: space-around; */
 }
 
+.card h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
 .card img {
+    height: 400px;
+    max-height: 100%;
     width: 100%;
+    object-fit: cover;
     margin: auto;
+}
+
+.card button {
+    margin-top: auto; /* Push the buttons to the bottom of the card */
 }
 
 #searchInput {
