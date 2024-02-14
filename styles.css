@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 20px;
+    border: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: 1px; */
+}
+
+.card {
+    width: 20%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* text-align: center; */
+    /* justify-content: space-around; */
+}
+
+.card img {
+    width: 100%;
+    margin: auto;
+}
+
+#searchInput {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    width: 70%;
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+#searchInput:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: calc(33.33% - 20px);
+        /* 3 cards per row on tablet */
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        width: calc(100% - 20px);
+        /* 1 card per row on mobile */
+    }
+}
+
+#prevBtn {
+    position: relative;
+    bottom: 0;
+}
+
+
+.inputFields {
+    display: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.user_input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    width: 80%;
+}
+
+textarea{
+    height: 100px;
+}
+
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+#searchInput:focus {
+    border-color: #4CAF50;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+}
+
+.modal-content {
+    position: relative;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Movie details styles */
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.modal-content strong {
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        max-width: 95%;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+    }
+}

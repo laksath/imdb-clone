@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDB Movies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg">
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="searchHeading">Movie Search</h2>
+        <input type="text" id="searchInput" placeholder="Search for a movie">
+        <button onclick="searchMovie()">Search</button>
+        <h3 id="currentPageInfo"></h3>
+        <div class="cards" id="cards-container"></div>
+        <div class="pagination">
+            <button id="prevBtn" onclick="prevPage()">Previous</button>
+            <button id="nextBtn" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+
+    <!-- Text Fields -->
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Movie List -->
+
+    <!-- Display 5 Cards in each row (Desktop) -->
+    <!-- Display 3 Cards in each row (Tablet) -->
+    <!-- Display 3 Cards in each row (Mobile) -->
+    <script src="javascriptAPI.js"></script>
+</body>
+
+</html>
